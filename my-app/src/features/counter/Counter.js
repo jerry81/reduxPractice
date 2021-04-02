@@ -5,11 +5,11 @@ import {
   increment,
   incrementByAmount,
   incrementAsync,
-  selectCount,
-} from './counterSlice';
+  selectCount, // state
+} from './counterSlice'; // imports actions and state from counterSlice
 import styles from './Counter.module.css';
 
-export function Counter() {
+export function Counter() { // functional component, used in App.js
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
