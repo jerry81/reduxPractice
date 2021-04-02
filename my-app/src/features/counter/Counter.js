@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux'; // hooks
 import {
   decrement,
   increment,
@@ -10,17 +10,17 @@ import {
 import styles from './Counter.module.css';
 
 export function Counter() { // functional component, used in App.js
-  const count = useSelector(selectCount);
+  const count = useSelector(selectCount); // subscribes to state, nothing to do with css selectors
   const dispatch = useDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
+  const [incrementAmount, setIncrementAmount] = useState('2'); // local state
 
   return (
     <div>
       <div className={styles.row}>
-        <button
+        <button // plus button
           className={styles.button}
           aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+          onClick={() => dispatch(increment())} // dispatching an action
         >
           +
         </button>
@@ -37,13 +37,13 @@ export function Counter() { // functional component, used in App.js
         <input
           className={styles.textbox}
           aria-label="Set increment amount"
-          value={incrementAmount}
-          onChange={e => setIncrementAmount(e.target.value)}
+          value={incrementAmount} // bind data, local state
+          onChange={e => setIncrementAmount(e.target.value)} // bind change event, update local state
         />
         <button
           className={styles.button}
           onClick={() =>
-            dispatch(incrementByAmount(Number(incrementAmount) || 0))
+            dispatch(incrementByAmount(Number(incrementAmount) || 0)) // global state action
           }
         >
           Add Amount
