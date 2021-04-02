@@ -4,7 +4,12 @@ import React from "react";
 function VisibilityFilters() {
     return (
       <div className="VFRoot">
-        this is VisibilityFilters component
+          show:
+          <select>
+              <option>All</option>
+              <option>Finished</option>
+              <option>Unfinished</option>
+          </select>
       </div>
     );
   }
