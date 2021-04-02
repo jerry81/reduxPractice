@@ -1,3 +1,8 @@
 .addTodoRoot {
     margin: 10px;
 }
+
+.addTodo-button {
+    color: black;
+    background: green;
+}

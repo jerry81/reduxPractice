@@ -2,10 +2,13 @@
 import "./Todo.css";
 import React from "react";
 
+const todoData = ['item1', 'item 2']
+const todo = todoData.map((item, index) => <li key={index}>{item}</li>)
+
 function ToDo() {
     return (
       <div className="ToDoRoot">
-        this is todo component
+        {todo}
       </div>
     );
   }
