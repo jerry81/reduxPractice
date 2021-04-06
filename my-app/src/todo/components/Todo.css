@@ -1,3 +1,8 @@
 .ToDoRoot {
     margin: 10px;
 }
+
+.ToDoDone {
+    color: lime;
+    margin-left: 5px;
+}
