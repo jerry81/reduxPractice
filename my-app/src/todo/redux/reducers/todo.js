@@ -3,7 +3,7 @@ const initialState = { /* not exported */
   byIds: {}
 };
 
-export default function(state = initialState, action) { // reducer 
+export const todo = function(state = initialState, action) { // reducer 
     switch (action.type) { // support multiple actions
       case 'ADD_TODO': {
           // allIds push, byIds push 
