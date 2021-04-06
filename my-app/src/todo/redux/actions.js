@@ -4,7 +4,8 @@ export const addToDo = content => ({
   type: "ADD_TODO",
   payload: {
     content,
-    id: ++nextTodoId
+    id: ++nextTodoId,
+    status: 'Unfinished'
   }
 });
 

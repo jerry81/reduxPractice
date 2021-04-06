@@ -1,6 +1,15 @@
 const initialState = { /* not exported */
-  allIds: [],
-  byIds: {}
+  allIds: [99998, 99999],
+  byIds: {
+    99998: { 
+      content: 'item1',
+      completed: false
+    },     
+    99999: { 
+      content: 'item2',
+      completed: true
+    }
+  }
 };
 
 export const todo = function(state = initialState, action) { // reducer 
@@ -15,7 +24,7 @@ export const todo = function(state = initialState, action) { // reducer
             ...state.byIds,
             [id]: { // what's this - square brackets allows us to evaluate the variable key 
               content,
-              completed: false
+              completed: false,
             }
           }
         };
