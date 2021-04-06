@@ -1,7 +1,7 @@
 import "./Todo.css";
 import React from "react";
 import { connect } from "react-redux";
-import { getTodos } from "../redux/selectors";
+import { getTodosByVisibilityFilter } from "../redux/selectors";
 import { toggleTodo } from '../redux/actions'
 
 function ToDo(props) {
@@ -19,5 +19,5 @@ function ToDo(props) {
 }
 
 export default connect(store => ({
-  todos: getTodos(store)
+  todos: getTodosByVisibilityFilter(store, store.visibilityFilter)
 }), { toggleTodo } /* mapStateToProps */)(ToDo);

@@ -12,7 +12,6 @@ function AddToDo(props) {
     props.addToDo(input)
   }
 
-  console.log("props is ", props);
   return (
     <div className="addTodoRoot">
       <input

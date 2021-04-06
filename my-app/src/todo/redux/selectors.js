@@ -14,6 +14,17 @@ export const getTodos = (store) => {
 
 export const getTodosByVisibilityFilter = (store, filter) => {
     return getTodos(store).filter(item => {
-        return item.status === filter
+        console.log('filter is ', filter)
+        switch (filter) {
+            case 'All': { 
+                return true
+            }
+            case 'Finished': { 
+                return item.completed
+            }
+            default: { 
+                return !item.completed 
+            }
+        }
     })
 }
